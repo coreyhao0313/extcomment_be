@@ -10,12 +10,12 @@ Node.js、Koa、MongoDB、Redis、Mongoose、Selenium-Webdriver
 
 #### 欄位定義
 ###### account
->編號 identity
->暱稱 nick
->信箱 email
->註解 note
+> * 編號 identity
+> * 暱稱 nick
+> * 信箱 email
+> * 註解 note
 
-######website
+###### website
 > * 編號 identity
 > * 對象編號 tid `(kind==path ? identity(host) : null)`
 > * 帳號 account.identity
@@ -23,21 +23,21 @@ Node.js、Koa、MongoDB、Redis、Mongoose、Selenium-Webdriver
 > * 名 name
 > * 註解 note
 
-######comment
+###### comment
 > * 編號 identity
 > * 對象編號 tid `(kind==reply ? identity(normal) : identity(website))`
 > * 帳號 account.identity
 > * 類型 kind `(normal || reply)`
 > * 內容 content
 
-######grade
+###### grade
 > * 編號 identity
 > * 帳號 account.identity
 > * 對象編號 tid `(identity)`
 > * 類型 kind `(comment.normal || comment.reply || website.host || website.path)`
 > * 評級 liking `(1 || -1)`
 
-######subscribe
+###### subscribe
 > * 編號 identity
 > * 帳號 account.identity
 > * 訂閱對象編號 wid `(identity)`
@@ -47,7 +47,7 @@ Node.js、Koa、MongoDB、Redis、Mongoose、Selenium-Webdriver
 ---
 
 #### API 傳回格式
-######website
+###### website
 ```json
 {
 	"identity": "016a95adb93500007c90000000000000",
@@ -63,8 +63,7 @@ Node.js、Koa、MongoDB、Redis、Mongoose、Selenium-Webdriver
 }
 ```
 
-
-######comment
+###### comment
 ```json
 {
 	"identity": "016a35adb93500007e10000000000000",
@@ -81,7 +80,7 @@ Node.js、Koa、MongoDB、Redis、Mongoose、Selenium-Webdriver
 	"content": "這是留言中的回覆喔"
 }
 ```
-######grade
+###### grade
 ```json
 {
 	"identity": "014c67adb234200034e0000000000000",
