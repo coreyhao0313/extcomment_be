@@ -1,0 +1,64 @@
+{
+	"development": {
+		"host": "127.0.0.1",
+		"port": 3002,
+		"oauth": {
+			"google": {
+				"clientId": "***.apps.googleusercontent.com"
+			}
+		},
+		"auth": {
+			"jwt": {"secret": "c***"},
+			"whitelist": [
+				{"path": "^\/account\/login\/?.*", "methods": ["all"]},
+				{"path": "^\/comments\/?.*", "methods": ["get"]},
+				{"path": "^\/comment\/?.*", "methods": ["get", "post"]},
+				{"path": "^\/website\/?.*", "methods": ["get", "post"]},
+				{"path": "^\/grade\/?.*", "methods": ["get"]}
+			]
+		},
+		"mongodb": {
+			"uri": "mongodb://***:***@127.0.0.1:***/extcomment",
+			"option": {
+				"useNewUrlParser": true,
+				"useUnifiedTopology": true
+			}
+		},
+		"redis": {
+			"port": "6379",
+			"host": "127.0.0.1",
+			"password": "***"
+		}
+	},
+	"production": {
+		"host": "127.0.0.1",
+		"port": 6000,
+		"oauth": {
+			"google": {
+				"clientId": "***.apps.googleusercontent.com"
+			}
+		},
+		"auth": {
+			"jwt": {"secret": "c***"},
+			"whitelist": [
+				{"path": "^\/account\/login\/?.*", "methods": ["all"]},
+				{"path": "^\/comments\/?.*", "methods": ["get"]},
+				{"path": "^\/comment\/?.*", "methods": ["get", "post"]},
+				{"path": "^\/website\/?.*", "methods": ["get", "post"]},
+				{"path": "^\/grade\/?.*", "methods": ["get"]}
+			]
+		},
+		"mongodb": {
+			"uri": "mongodb://***:***@127.0.0.1:***/extcomment",
+			"option": {
+				"useNewUrlParser": true,
+				"useUnifiedTopology": true
+			}
+		},
+		"redis": {
+			"port": "6379",
+			"host": "127.0.0.1",
+			"password": "***"
+		}
+	}
+}
