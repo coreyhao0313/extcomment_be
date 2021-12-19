@@ -18,31 +18,31 @@ Node.js、Koa、MongoDB、Redis、Mongoose、Selenium-Webdriver
 ######website
 > * 編號 identity
 > * 對象編號 tid `(kind==path ? identity(host) : null)`
->帳號 account.identity
->類型 kind `(host || path)`
->名 name
->註解 note
+> * 帳號 account.identity
+> * 類型 kind `(host || path)`
+> * 名 name
+> * 註解 note
 
 ######comment
->編號 identity
->對象編號 tid `(kind==reply ? identity(normal) : identity(website))`
->帳號 account.identity
->類型 kind `(normal || reply)`
->內容 content
+> * 編號 identity
+> * 對象編號 tid `(kind==reply ? identity(normal) : identity(website))`
+> * 帳號 account.identity
+> * 類型 kind `(normal || reply)`
+> * 內容 content
 
 ######grade
->編號 identity
->帳號 account.identity
->對象編號 tid `(identity)`
->類型 kind `(comment.normal || comment.reply || website.host || website.path)`
->評級 liking `(1 || -1)`
+> * 編號 identity
+> * 帳號 account.identity
+> * 對象編號 tid `(identity)`
+> * 類型 kind `(comment.normal || comment.reply || website.host || website.path)`
+> * 評級 liking `(1 || -1)`
 
 ######subscribe
->編號 identity
->帳號 account.identity
->訂閱對象編號 wid `(identity)`
->類型 kind `(comment || grade)`
->行為 act `(identity)`
+> * 編號 identity
+> * 帳號 account.identity
+> * 訂閱對象編號 wid `(identity)`
+> * 類型 kind `(comment || grade)`
+> * 行為 act `(identity)`
 
 ---
 
