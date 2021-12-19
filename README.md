@@ -16,8 +16,8 @@ Node.js、Koa、MongoDB、Redis、Mongoose、Selenium-Webdriver
 >註解 note
 
 ######website
->編號 identity
->對象編號 tid `(kind==path ? identity(host) : null)`
+> * 編號 identity
+> * 對象編號 tid `(kind==path ? identity(host) : null)`
 >帳號 account.identity
 >類型 kind `(host || path)`
 >名 name
